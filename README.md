@@ -12,7 +12,6 @@ For whom want to make a basic lab for study and already knows how to build one, 
 ## Before you begin
 
 * I configured <b>client secret for service principal</b> as default for azure authentication method, you can use the terraform.tfvars to inform the credentials, but if you want change this method just access main.tf and make the adjusts, please refer to https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/service_principal_client_secret
-* This solution uses <b> weave CNI </b> as default.
 * Authentication for ssh to nodes are made by public/private keys (openssh) but you don't need to create, since terraform will create for you in <b>certs</b> directory (local).
 * Your external ip is whitelisted automatically but if you want to access it in other regions you need to specify this in var <b>ip_whitelist</b>
 
@@ -36,3 +35,9 @@ For whom want to make a basic lab for study and already knows how to build one, 
 6. Use the private key created in certs folder to access your master node ````ssh -i certs/privkey.pem master@MASTER-EXTERNAL-IP ````
 7. (Optional) If you want to run your cluster command in your machine copy the kubeconfig file in master (/etc/kubernetes/admin.conf) and change the server from local-ip to external-ip of master node ````scp master@MASTER-EXTERNAL-IP:/etc/kubernetes/admin.conf ~/.kube/config````
 8. Run a command to check of nodes are ready ````kubectl get nodes```` , ````kubectl run nginx --image=nginx ; kubectl get pods -w````
+
+
+##Important notes
+
+* You can connect to worker nodes from master node using hostname e.g: ````ssh node-0````
+* This solution uses <b> weave CNI </b> as default.
