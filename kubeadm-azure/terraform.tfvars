@@ -24,6 +24,9 @@ vnet_name = "vnet01"
 // Resource group name
 k8s_group_name = "k8s"
 
+// Region name 
+region_name = "East US"
+
 // Private key path (default)
 private_key_path = "certs/privkey.pem"
 

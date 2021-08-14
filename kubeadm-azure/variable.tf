@@ -1,5 +1,6 @@
 variable "qnt_k8s_nodes" {}
 variable "k8s_group_name" {}
+variable "region_name" {}
 variable "t_k8s_worker" {}
 variable "t_k8s_master" {}
 variable "vnet_name" {}
