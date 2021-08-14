@@ -35,6 +35,7 @@ For whom want to make a basic lab for study and already knows how to build one, 
 6. Use the private key created in certs folder to access your master node ````ssh -i certs/privkey.pem master@MASTER-EXTERNAL-IP ````
 7. (Optional) If you want to run your cluster command in your machine copy the kubeconfig file in master (/etc/kubernetes/admin.conf) and change the server from local-ip to external-ip of master node ````scp master@MASTER-EXTERNAL-IP:/etc/kubernetes/admin.conf ~/.kube/config````
 8. Run a command to check of nodes are ready ````kubectl get nodes```` , ````kubectl run nginx --image=nginx ; kubectl get pods -w````
+9. Start your labs. To destroy resources ````terraform destroy````
 
 
 ## Important notes
