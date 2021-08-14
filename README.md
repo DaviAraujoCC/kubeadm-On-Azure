@@ -37,7 +37,7 @@ For whom want to make a basic lab for study and already knows how to build one, 
 8. Run a command to check of nodes are ready ````kubectl get nodes```` , ````kubectl run nginx --image=nginx ; kubectl get pods -w````
 
 
-##Important notes
+## Important notes
 
 * You can connect to worker nodes from master node using hostname e.g: ````ssh node-0````
 * This solution uses <b> weave CNI </b> as default.
