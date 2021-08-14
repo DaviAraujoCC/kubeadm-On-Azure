@@ -30,7 +30,7 @@ For whom want to make a basic lab for study and already knows how to build one, 
 
 3. Use ````terraform init```` to download plugins/modules
 
-4. After finishing first step you can use ````terraform plan```` to check if everything is fine
+4. After finishing second step you can use ````terraform plan```` to check if everything is fine
 5. Run ````terraform apply```` to create your cluster and check for output (````terraform output````)
 6. Use the private key created in certs folder to access your master node ````ssh -i certs/privkey.pem master@MASTER-EXTERNAL-IP ````
 7. (Optional) If you want to run your cluster command in your machine copy the kubeconfig file in master (/etc/kubernetes/admin.conf) and change the server from local-ip to external-ip of master node ````scp master@MASTER-EXTERNAL-IP:/etc/kubernetes/admin.conf ~/.kube/config````
