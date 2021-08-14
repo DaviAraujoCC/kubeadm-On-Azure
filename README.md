@@ -1,6 +1,6 @@
 ## Kubeadm On Azure
 
-![image](https://user-images.githubusercontent.com/70732391/129459081-0bc31093-d0fb-41fa-b2b7-e53d7ef2ba70.png)
+<div style="text-align:center">![image](https://user-images.githubusercontent.com/70732391/129459081-0bc31093-d0fb-41fa-b2b7-e53d7ef2ba70.png)</div>
 
 
 This is a simple project in terraform made by me while studying for CKA, it just create a basic k8s cluster with one master node  and x worker nodes using kubeadm utility in azure environment.
