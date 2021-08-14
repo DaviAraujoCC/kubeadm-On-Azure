@@ -26,12 +26,13 @@ For whom want to make a basic lab for study and already knows how to build one, 
 
 ## Usage: 
 
-1. Modify the <b>terraform.tfvars</b> file with your credentials/values, as you like.
+1. Download this repo and access the directory kubeadm-azure.
+2. Modify the <b>terraform.tfvars</b> file with your credentials/values, as you like.
 
-2. Use ````terraform init```` to download plugins/modules
+3. Use ````terraform init```` to download plugins/modules
 
-3. After finishing first step you can use ````terraform plan```` to check if everything is fine
-4. Run ````terraform apply```` to create your cluster and check for output (````terraform output````)
-5. Use the private key created in certs folder to access your master node ````ssh -i certs/privkey.pem master@MASTER-EXTERNAL-IP ````
-6. (Optional) If you want to run your cluster command in your machine copy the kubeconfig file in master (/etc/kubernetes/admin.conf) and change the server from local-ip to external-ip ````scp master@MASTER-EXTERNAL-IP:/etc/kubernetes/admin.conf ~/.kube/config````
-7. Run a command to check of nodes are ready ````kubectl get nodes```` , ````kubectl run nginx --image=nginx ; kubectl get pods -w````
+4. After finishing first step you can use ````terraform plan```` to check if everything is fine
+5. Run ````terraform apply```` to create your cluster and check for output (````terraform output````)
+6. Use the private key created in certs folder to access your master node ````ssh -i certs/privkey.pem master@MASTER-EXTERNAL-IP ````
+7. (Optional) If you want to run your cluster command in your machine copy the kubeconfig file in master (/etc/kubernetes/admin.conf) and change the server from local-ip to external-ip ````scp master@MASTER-EXTERNAL-IP:/etc/kubernetes/admin.conf ~/.kube/config````
+8. Run a command to check of nodes are ready ````kubectl get nodes```` , ````kubectl run nginx --image=nginx ; kubectl get pods -w````
