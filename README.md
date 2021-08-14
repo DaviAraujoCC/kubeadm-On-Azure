@@ -18,11 +18,11 @@ For whom want to make a basic lab for study and already knows how to build one, 
 
 ## Techs:
 
-- [Kubeadm] 
-- [Terraform]
-- [Azure]
-- [Kubernetes]
-- [Docker]
+- Kubeadm 
+- Terraform
+- Azure
+- Kubernetes
+- Docker
 
 ## Usage: 
 
