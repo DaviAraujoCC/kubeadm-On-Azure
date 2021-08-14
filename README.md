@@ -11,7 +11,7 @@ For whom want to make a basic lab for study and already knows how to build one, 
 
 ## Before you begin
 
-* I configured <b>client secret for service principal</b> as default, you can use the terraform.tfvars to inform the credentials, but if you want change this method just access main.tf and make the adjusts, please refer to https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/service_principal_client_secret
+* I configured <b>client secret for service principal</b> as default for azure authentication method, you can use the terraform.tfvars to inform the credentials, but if you want change this method just access main.tf and make the adjusts, please refer to https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/service_principal_client_secret
 * This solution uses <b> weave CNI </b> as default.
 * Authentication for ssh to nodes are made by public/private keys (openssh) but you don't need to create, since terraform will create for you in <b>certs</b> directory (local).
 * Your external ip is whitelisted automatically but if you want to access it in other regions you need to specify this in var <b>ip_whitelist</b>
