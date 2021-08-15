@@ -27,10 +27,6 @@ jobs:
     - name: Terraform Init
       run: terraform init
       working-directory: ./kubeadm-azure
-
-    - name: Terraform Format
-      run: terraform fmt -check
-      working-directory: ./kubeadm-azure
       
     - name: Terraform Plan
       run: terraform plan
