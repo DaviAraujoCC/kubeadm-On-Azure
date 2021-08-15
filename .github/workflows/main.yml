@@ -7,11 +7,6 @@ jobs:
   terraform:
     name: 'Terraform'
     runs-on: ubuntu-latest
-    env:
-      ARM_CLIENT_ID: ${{ secrets.TF_ARM_CLIENT_ID}}
-      ARM_CLIENT_SECRET: ${{ secrets.TF_ARM_CLIENT_SECRET }}
-      ARM_SUBSCRIPTION_ID: ${{ secrets.TF_ARM_SUBSCRIPTION_ID}}
-      ARM_TENANT_ID: ${{ secrets.TF_ARM_TENANT_ID}}
    
     defaults:
       run:
@@ -29,9 +24,9 @@ jobs:
       working-directory: ./kubeadm-azure
       
     - name: Terraform Plan
-      run: terraform plan
+      run: terraform plan -var="azure_subscription_id=${{ secrets.TF_ARM_SUBSCRIPTION_ID}}" -var="azure_client_id=${{ secrets.TF_ARM_CLIENT_ID}}" -var="azure_client_secret=${{ secrets.TF_ARM_CLIENT_SECRET }}" -var="azure_tenant_id=${{ secrets.TF_ARM_TENANT_ID}}"
       working-directory: ./kubeadm-azure
       
     - name: Terraform Apply
-      run: terraform apply -auto-approve
+      run: terraform apply -var="azure_subscription_id=${{ secrets.TF_ARM_SUBSCRIPTION_ID}}" -var="azure_client_id=${{ secrets.TF_ARM_CLIENT_ID}}" -var="azure_client_secret=${{ secrets.TF_ARM_CLIENT_SECRET }}" -var="azure_tenant_id=${{ secrets.TF_ARM_TENANT_ID}}" -auto-approve
       working-directory: ./kubeadm-azure
