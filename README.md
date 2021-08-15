@@ -1,5 +1,7 @@
 ## Kubeadm On Azure
 
+![stage](https://github.com/DaviAraujoCC/kubeadm-On-Azure/actions/workflows/main.yml/badge.svg)
+
 
 This is a simple project in terraform made while studying for CKA, it just create a basic k8s cluster with one master node  and x worker nodes using kubeadm utility in azure environment.
 
