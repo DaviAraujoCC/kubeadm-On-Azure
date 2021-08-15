@@ -7,7 +7,6 @@ jobs:
   terraform:
     name: 'Terraform'
     runs-on: ubuntu-latest
-    
    
     defaults:
       run:
@@ -23,17 +22,19 @@ jobs:
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v1
 
-    # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
+
     - name: Terraform Init
       run: terraform init
+      working-directory: ./kubeadm-azure
 
-    # Checks that all Terraform configuration files adhere to a canonical format
     - name: Terraform Format
       run: terraform fmt -check
-
-    # Generates an execution plan for Terraform
+      working-directory: ./kubeadm-azure
+      
     - name: Terraform Plan
       run: terraform plan
-
+      working-directory: ./kubeadm-azure
+      
     - name: Terraform Apply
       run: terraform apply -auto-approve
+      working-directory: ./kubeadm-azure
