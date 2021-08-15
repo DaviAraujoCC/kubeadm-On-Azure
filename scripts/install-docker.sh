@@ -10,3 +10,5 @@ sudo sed -i 's/sock$/sock --exec-opt native.cgroupdriver=systemd/g' /lib/systemd
 
 sudo systemctl daemon-reload
 sudo systemctl restart docker
+
+#

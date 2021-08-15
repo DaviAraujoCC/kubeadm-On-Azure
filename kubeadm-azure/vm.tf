@@ -64,7 +64,7 @@ resource "azurerm_linux_virtual_machine" "k8s-master" {
       "sudo /bin/bash /tmp/install-master.sh ${var.qnt_k8s_nodes} ${self.public_ip_address}",
     ]
 
-    on_failure = continue
+  
   }
 }
 
@@ -132,7 +132,7 @@ resource "azurerm_linux_virtual_machine" "k8s-worker" {
       "sudo ssh -oStrictHostKeyChecking=no -i /tmp/id_rsa master@${azurerm_linux_virtual_machine.k8s-master.private_ip_address} \"cat /tmp/cmd_join\" | sudo sh ",
     ]
 
-    on_failure = continue
+  
   }
 
 }
