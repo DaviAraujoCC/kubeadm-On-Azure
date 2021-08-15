@@ -1,7 +1,7 @@
 ## Kubeadm On Azure
 
 
-This is a simple project in terraform made by me while studying for CKA, it just create a basic k8s cluster with one master node  and x worker nodes using kubeadm utility in azure environment.
+This is a simple project in terraform made while studying for CKA, it just create a basic k8s cluster with one master node  and x worker nodes using kubeadm utility in azure environment.
 
 For whom want to make a basic lab for study and already knows how to build one, this is a way-to-go.
 
